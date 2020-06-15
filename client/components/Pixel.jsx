@@ -2,7 +2,7 @@ import React from 'react'
 
 class Pixel extends React.Component {
   state = {
-    color: 'blue'
+    color: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
   }
 
   render () {
@@ -11,7 +11,10 @@ class Pixel extends React.Component {
         height: '50px',
         width: '50px',
         backgroundColor: this.state.color
-      }}></div>
+
+      }}>
+
+      </div>
     )
   }
 }
