@@ -1,10 +1,13 @@
 import React from 'react'
 
+const randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
 class Pixel extends React.Component {
  state = {
    style: {
      fontFamily: 'Times New Roman',
-     backgroundColor: 'blue',
+     backgroundColor: randomHexColor(),
      height: '100px',
      width: '100px'
    }
@@ -18,4 +21,7 @@ class Pixel extends React.Component {
  }
 }
 
+
 export default Pixel
+
+
