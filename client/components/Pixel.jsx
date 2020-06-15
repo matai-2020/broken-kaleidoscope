@@ -12,9 +12,17 @@ class Pixel extends React.Component {
     }
   }
 
+  changeColour = (event) => {
+    this.setState({
+      count: randomHexColor()
+    })
+  }
+
   render () {
     return (
-      <div style={this.state.style}>
+      <div
+        onClick={this.changeColour}
+        style={this.state.style}>
       </div>
     )
   }
