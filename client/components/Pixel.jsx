@@ -4,19 +4,20 @@ class Pixel extends React.Component {
   constructor () {
     super()
     this.state = {
-      height: '50px',
-      backgroundColor: 'blue',
-      width: '50px'
+      style: {
+        height: '50px',
+        backgroundColor: this.randomHexColor(),
+        width: '50px'
+      }
     }
   }
-  render () { 
-    return (
-      <div style={{
-        backgroundColor: this.state.backgroundColor,
-        height: this.state.height,
-        width: this.state.width
-      }} >
 
+  randomHexColor = () => `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+  
+
+  render () {
+    return (
+      <div style={this.state.style}>
       </div>
     )
   }
