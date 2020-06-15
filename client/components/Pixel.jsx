@@ -4,5 +4,4 @@ const Pixel = () => {
   return <div>Hi</div>
 }
 
-
 export default Pixel
