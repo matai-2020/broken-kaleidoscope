@@ -13,25 +13,36 @@ class App extends React.Component {
     return `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
   }
 
-  render() {
+  clickHandler = (evt) => {
+    this.setState({
+      backgroundColor: this.randomHexColor()
+    })
+  }
+
+  render () {
     return (
       <div id="app">
         <Pixel
           height={this.state.height}
           width={this.state.width}
           backgroundColor={this.randomHexColor()}
+          clickHandler={this.clickHandler}
         />
 
         <Pixel
           height={this.state.height}
           width={this.state.width}
           backgroundColor={this.randomHexColor()}
+          clickHandler = {this.clickHandler}
+
         />
 
         <Pixel
           height={this.state.height}
           width={this.state.width}
           backgroundColor={this.randomHexColor()}
+          clickHandler = {this.clickHandler}
+
         />
 
       </div>
