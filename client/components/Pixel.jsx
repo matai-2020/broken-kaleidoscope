@@ -7,8 +7,8 @@ class Pixel extends React.Component {
  state = {
    style: {
      backgroundColor: randomHexColor(),
-     height: '15px',
-     width: '15px'
+     height: '150px',
+     width: '150px'
    }
  }
 
@@ -30,12 +30,33 @@ class Pixel extends React.Component {
    })
  }
 
+ componentDidMount () {
+   this.timerID = setInterval(
+     () => this.tick(),
+     100
+   )
+ }
+
+ componentWillUnmount () {
+   clearInterval(this.timerID)
+ }
+
+ tick () {
+   this.setState({
+     style: {
+       ...this.state.style,
+       backgroundColor: randomHexColor()
+     }
+   })
+ }
+
  render () {
    return (
-     <div onClick={this.clickHandler}  onMouseMove={this.mouseHandler} style = {this.state.style}>
+     <div onClick={this.clickHandler} onMouseMove={this.mouseHandler} style = {this.state.style} >
      </div>
    )
  }
 }
+
 
 export default Pixel
