@@ -6,16 +6,16 @@ const randomHexColor = () =>
 class Pixel extends React.Component {
    state = {style: {
     fontFamily: 'Times New Roman',
-    width: '50px',
-    height: '50px',
+    width: '20px',
+    height: '20px',
     backgroundColor: randomHexColor()
     }
 }
   yellowOnDrag = evt => {
     this.setState({
         style: {
-        width: '50px',
-        height: '50px',
+        width: '20px',
+        height: '20px',
         backgroundColor: 'yellow'
         }
     })
@@ -24,8 +24,8 @@ class Pixel extends React.Component {
   greenOnMouseEnter = evt => {
     this.setState({
         style: {
-        width: '50px',                
-        height: '50px',
+        width: '20px',                
+        height: '20px',
         backgroundColor: 'green'
         }
     })
@@ -35,8 +35,8 @@ class Pixel extends React.Component {
     evt.preventDefault()
     this.setState({
         style: {
-        width: '50px',                
-        height: '50px',
+        width: '20px',                
+        height: '20px',
         backgroundColor: 'black'
         }
     })
@@ -47,8 +47,8 @@ class Pixel extends React.Component {
     evt.preventDefault()
     this.setState({
         style: {
-        width: '50px',                
-        height: '50px',
+        width: '20px',                
+        height: '20px',
         backgroundColor: 'white'
         }
     })
@@ -59,8 +59,8 @@ class Pixel extends React.Component {
  clickHandler = evt => {
      this.setState({
          style: {
-            width: '50px',
-            height: '50px',
+            width: '5px',
+            height: '5px',
             backgroundColor: randomHexColor()
             }
         })
