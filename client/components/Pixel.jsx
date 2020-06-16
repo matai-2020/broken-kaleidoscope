@@ -6,7 +6,6 @@ const randomHexColor = () =>
 class Pixel extends React.Component {
  state = {
    style: {
-     fontFamily: 'Times New Roman',
      backgroundColor: randomHexColor(),
      height: '15px',
      width: '15px'
@@ -16,10 +15,8 @@ class Pixel extends React.Component {
  clickHandler = () => {
    this.setState({
      style: {
-       fontFamily: 'Times New Roman',
-       backgroundColor: randomHexColor(),
-       height: '15px',
-       width: '15px'
+       ...this.state.style,
+       backgroundColor: randomHexColor()
      }
    })
  }
@@ -27,10 +24,8 @@ class Pixel extends React.Component {
  mouseHandler = () => {
    this.setState({
      style: {
-       fontFamily: 'Times New Roman',
-       backgroundColor: randomHexColor(),
-       height: '15px',
-       width: '15px'
+       ...this.state.style,
+       backgroundColor: randomHexColor()
      }
    })
  }
