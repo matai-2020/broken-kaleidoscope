@@ -11,13 +11,27 @@ class Pixel extends React.Component {
     })
   }
 
+  mouseEnterHandler = () => {
+    this.setState({
+      color: 'green'
+    })
+  }
+
+  dragHandler = () => {
+    this.setState({
+      color: 'yellow'
+    })
+  }
+
   render () {
     return (
       <div style={{
         height: '50px',
         width: '50px',
         backgroundColor: this.state.color
-      }} onClick={this.clickHandler}>
+      }} onClick={this.clickHandler}
+      onMouseEnter={this.mouseEnterHandler}
+      onDragEnter={this.dragHandler}>
 
       </div>
     )
