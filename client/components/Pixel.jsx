@@ -23,9 +23,35 @@ class Pixel extends React.Component {
       }
     })
   }
+
+  hoverHandler = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'green',
+        height: '50px',
+        width: '50px'
+      }
+    })
+  }
+
+  exitHandler = () => {
+    this.setState({
+      style: {
+        backgroundColor: this.randomHexColor(),
+        height: '50px',
+        width: '50px'
+      }
+    })
+  }
+
   render () {
     return (
-      <div style={this.state.style} onClick={this.clickHandler} >
+      <div style={this.state.style}
+        onClick={this.clickHandler}
+        onMouseEnter={this.hoverHandler}
+        onMouseLeave={this.exitHandler}
+
+      >
 
       </div>
     )
