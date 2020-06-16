@@ -26,8 +26,8 @@ class Pixel extends React.Component {
   render () {
     return (
       <div style={{
-        height: '50px',
-        width: '50px',
+        height: '5px',
+        width: '5px',
         backgroundColor: this.state.color
       }} onClick={this.clickHandler}
       onMouseEnter={this.mouseEnterHandler}
