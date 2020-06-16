@@ -5,9 +5,9 @@ class Pixel extends React.Component {
     super()
     this.state = {
       style: {
-        height: '50px',
+        height: '20px',
         backgroundColor: this.randomHexColor(),
-        width: '50px'
+        width: '20px'
       }
     }
   }
@@ -18,8 +18,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: this.randomHexColor(),
-        height: '50px',
-        width: '50px'
+        height: '20px',
+        width: '20px'
       }
     })
   }
@@ -28,18 +28,49 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'green',
-        height: '50px',
-        width: '50px'
+        height: '20px',
+        width: '20px'
       }
     })
   }
 
-  exitHandler = () => {
+  // exitHandler = () => {
+  //   this.setState({
+  //     style: {
+  //       backgroundColor: this.randomHexColor(),
+  //       height: '20px',
+  //       width: '20px'
+  //     }
+  //   })
+  // }
+
+  blackClick = () => {
     this.setState({
       style: {
-        backgroundColor: this.randomHexColor(),
-        height: '50px',
-        width: '50px'
+        backgroundColor: 'black',
+        height: '20px',
+        width: '20px'
+      }
+    })
+    event.preventDefault()
+  }
+
+  whiteClick = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'white',
+        height: '20px',
+        width: '20px'
+      }
+    })
+  }
+
+  yellowTown = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'yellow',
+        height: '20px',
+        width: '20px'
       }
     })
   }
@@ -49,8 +80,10 @@ class Pixel extends React.Component {
       <div style={this.state.style}
         onClick={this.clickHandler}
         onMouseEnter={this.hoverHandler}
-        onMouseLeave={this.exitHandler}
-
+        // onMouseLeave={this.exitHandler}
+        onContextMenu={this.blackClick}
+        onDoubleClick={this.whiteClick}
+        onDragEnter={this.yellowTown}
       >
 
       </div>
