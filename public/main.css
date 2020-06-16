@@ -12,3 +12,15 @@ div {
   display: flex;
   flex-wrap: wrap;
 }
+
+.redStyle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.blueStyle {
+  width: 300px;
+  height: 700px;
+  background-color: aqua;
+}
