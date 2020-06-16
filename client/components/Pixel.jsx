@@ -5,9 +5,9 @@ class Pixel extends React.Component {
     super()
     this.state = {
       style: {
-        height: '3px',
+        height: '20px',
         backgroundColor: this.randomHexColor(),
-        width: '3px'
+        width: '20px'
       }
     }
   }
@@ -18,8 +18,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: this.randomHexColor(),
-        height: '3px',
-        width: '3px'
+        height: '20px',
+        width: '20px'
       }
     })
   }
@@ -28,28 +28,28 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'green',
-        height: '3px',
-        width: '3px'
+        height: '20px',
+        width: '20px'
       }
     })
   }
 
-  exitHandler = () => {
-    this.setState({
-      style: {
-        backgroundColor: this.randomHexColor(),
-        height: '3px',
-        width: '3px'
-      }
-    })
-  }
+  // exitHandler = () => {
+  //   this.setState({
+  //     style: {
+  //       backgroundColor: this.randomHexColor(),
+  //       height: '5px',
+  //       width: '5px'
+  //     }
+  //   })
+  // }
 
   blackClick = () => {
     this.setState({
       style: {
         backgroundColor: 'black',
-        height: '3px',
-        width: '3px'
+        height: '20px',
+        width: '20px'
       }
     })
     event.preventDefault()
@@ -59,8 +59,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'white',
-        height: '3px',
-        width: '3px'
+        height: '20px',
+        width: '20px'
       }
     })
   }
@@ -69,10 +69,27 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'yellow',
-        height: '3px',
-        width: '3px'
+        height: '20px',
+        width: '20px'
       }
     })
+  }
+
+  load = () => {
+    setInterval(() => {
+      this.setState({
+        style: {
+          backgroundColor: this.randomHexColor(),
+          height: '20px',
+          width: '20px'
+        }
+      })
+    },
+    1000)
+  }
+
+  componentDidMount () {
+    this.load()
   }
 
   render () {
