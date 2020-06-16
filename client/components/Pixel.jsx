@@ -21,10 +21,31 @@ class Pixel extends React.Component {
     })
   }
 
+  makeGreen = () => {
+    this.setState({
+      style: {
+        ...this.state.style,
+        backgroundColor: 'green'
+      }
+    })
+  }
+
+  makeYellow = () => {
+    this.setState({
+      style: {
+        ...this.state.style,
+        backgroundColor: 'yellow'
+      }
+    })
+  }
+
   render () {
     return (
       <div
         onClick={this.changeColour}
+        onMouseEnter={this.makeGreen}
+        onMouseLeave={this.changeColour}
+        onDragEnter={this.makeYellow}
         style={this.state.style}>
       </div>
     )
