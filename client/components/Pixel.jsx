@@ -5,9 +5,9 @@ class Pixel extends React.Component {
     super()
     this.state = {
       style: {
-        height: '20px',
+        height: '3px',
         backgroundColor: this.randomHexColor(),
-        width: '20px'
+        width: '3px'
       }
     }
   }
@@ -18,8 +18,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: this.randomHexColor(),
-        height: '20px',
-        width: '20px'
+        height: '3px',
+        width: '3px'
       }
     })
   }
@@ -28,28 +28,28 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'green',
-        height: '20px',
-        width: '20px'
+        height: '3px',
+        width: '3px'
       }
     })
   }
 
-  // exitHandler = () => {
-  //   this.setState({
-  //     style: {
-  //       backgroundColor: this.randomHexColor(),
-  //       height: '20px',
-  //       width: '20px'
-  //     }
-  //   })
-  // }
+  exitHandler = () => {
+    this.setState({
+      style: {
+        backgroundColor: this.randomHexColor(),
+        height: '3px',
+        width: '3px'
+      }
+    })
+  }
 
   blackClick = () => {
     this.setState({
       style: {
         backgroundColor: 'black',
-        height: '20px',
-        width: '20px'
+        height: '3px',
+        width: '3px'
       }
     })
     event.preventDefault()
@@ -59,8 +59,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'white',
-        height: '20px',
-        width: '20px'
+        height: '3px',
+        width: '3px'
       }
     })
   }
@@ -69,8 +69,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'yellow',
-        height: '20px',
-        width: '20px'
+        height: '3px',
+        width: '3px'
       }
     })
   }
