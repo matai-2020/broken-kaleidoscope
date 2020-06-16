@@ -2,25 +2,7 @@ import React from 'react'
 import Pixel from './Pixel.jsx'
 
 const App = () => {
-  return (
-    <>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-    </>
-  )
+  return new Array(10000).fill(<Pixel />)
 }
 
 export default App

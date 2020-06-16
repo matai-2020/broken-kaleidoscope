@@ -8,8 +8,8 @@ class Pixel extends React.Component {
    style: {
      fontFamily: 'Times New Roman',
      backgroundColor: randomHexColor(),
-     height: '100px',
-     width: '100px'
+     height: '15px',
+     width: '15px'
    }
  }
 
@@ -18,15 +18,26 @@ class Pixel extends React.Component {
      style: {
        fontFamily: 'Times New Roman',
        backgroundColor: randomHexColor(),
-       height: '100px',
-       width: '100px'
+       height: '15px',
+       width: '15px'
+     }
+   })
+ }
+
+ mouseHandler = () => {
+   this.setState({
+     style: {
+       fontFamily: 'Times New Roman',
+       backgroundColor: randomHexColor(),
+       height: '15px',
+       width: '15px'
      }
    })
  }
 
  render () {
    return (
-     <div onClick={this.clickHandler} style = {this.state.style}>
+     <div onClick={this.clickHandler}  onMouseMove={this.mouseHandler} style = {this.state.style}>
      </div>
    )
  }
