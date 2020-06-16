@@ -5,30 +5,21 @@ class App extends React.Component {
   state = {
     fontFamily: 'Times New Roman',
     height: '20px',
-    width: '20px',
+    width: '20px'
   }
 
-  render () {
-    return (
-      <div id="app">
+  render() {
+
+    return Array.from({ length: 1000 }, (v, i) => {
+      return (
         <Pixel
           height={this.state.height}
           width={this.state.width}
         />
-
-        <Pixel
-          height={this.state.height}
-          width={this.state.width}
-        />
-
-        <Pixel
-          height={this.state.height}
-          width={this.state.width}
-
-        />
-
-      </div>
+      )
+    }
     )
+
   }
 }
 
