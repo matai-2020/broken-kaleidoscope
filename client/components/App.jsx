@@ -6,6 +6,14 @@ const App = () => {
     <>
     <div>React development has begun!</div>
     <Pixels />
+    <Pixels />
+    <Pixels />
+    <Pixels />
+    <Pixels />
+    <Pixels />
+    <Pixels />
+    <Pixels />
+    <Pixels />
     </>
   )
 }
